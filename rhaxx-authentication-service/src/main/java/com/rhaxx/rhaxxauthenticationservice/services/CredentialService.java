@@ -6,14 +6,12 @@ import com.rhaxx.rhaxxauthenticationservice.models.Credential;
 
 public interface CredentialService {
 
+    public List<Credential> getAllCredentials();
+
     public Credential createCredential(Credential credential);
 
     public void updateCredential(Credential credential);
 
     public void deleteCredential(Credential credential);
-
-    // public void deleteByCredentialId(long credentialId);
-
-    public List<Credential> getAllCredential();
 
 }

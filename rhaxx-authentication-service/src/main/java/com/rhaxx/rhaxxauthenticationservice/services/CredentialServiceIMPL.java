@@ -21,32 +21,37 @@ public class CredentialServiceIMPL implements CredentialService {
         this.credentialRepository = credentialRepository;
     }
 
+    @Override
+    public List<Credential> getAllCredentials() {
+        List<Credential> credentials = new ArrayList<>();
+        credentialRepository.findAll().forEach(credentials::add);
+        return credentials;
+    }
+
     @Transactional
     @Override
     public Credential createCredential(Credential credential) {
-        if(credential != null && credential != new Credential()) {
+        if (credential != null && credential != new Credential()) {
             return credentialRepository.save(credential);
-        }
-        else {
+        } else {
             return null;
         }
     }
 
+    @Transactional
     @Override
     public void updateCredential(Credential credential) {
-
+        if (credential != null && credential != new Credential()) {
+            credentialRepository.save(credential);
+        }
     }
 
+    @Transactional
     @Override
     public void deleteCredential(Credential credential) {
-
-    }
-
-    @Override
-    public List<Credential> getAllCredential() {
-        List<Credential> credentials = new ArrayList<>();
-		credentialRepository.findAll().forEach(credentials::add);
-		return credentials;
+        if (credential != null && credential != new Credential()) {
+            credentialRepository.delete(credential);
+        }
     }
 
 }
