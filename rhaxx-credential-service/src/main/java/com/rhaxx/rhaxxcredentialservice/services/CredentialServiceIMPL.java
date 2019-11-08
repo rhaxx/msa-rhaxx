@@ -8,7 +8,9 @@ import com.rhaxx.rhaxxcredentialservice.models.Credential;
 import com.rhaxx.rhaxxcredentialservice.repositories.CredentialRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CredentialServiceIMPL implements CredentialService {
 
     private CredentialRepository credentialRepository;
