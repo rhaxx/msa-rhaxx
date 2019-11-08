@@ -28,4 +28,36 @@ public class Credential {
     @JoinColumn(name = "PLAYER_ID")
     Player player;
 
+    public long getCredentialId() {
+        return this.credentialId;
+    }
+
+    public void setCredentialId(long credentialId) {
+        this.credentialId = credentialId;
+    }
+    
+    public String getUsername() {
+        return this.username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    public Player getPlayer() {
+        return this.player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    
 }
