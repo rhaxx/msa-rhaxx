@@ -1,0 +1,1 @@
+insert into PLAYER (PLAYER_ID, PLAYER_NAME, PLAYER_EMAIL, PLAYER_BALANCE) values (1000, 'rhaxx', 'rhaxx@example.com', 10);
