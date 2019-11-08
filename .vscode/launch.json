@@ -35,6 +35,16 @@
             "mainClass": "com.rhaxx.rhaxxauthenticationservice.RhaxxAuthenticationApplication",
             "projectName": "rhaxx-authentication-service",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DiscoveryApplication<rhaxx-discovery-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.rhaxx.rhaxxdiscoveryservice.DiscoveryApplication",
+            "projectName": "rhaxx-discovery-service",
+            "args": ""
         }
     ]
 }
