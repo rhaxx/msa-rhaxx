@@ -15,6 +15,26 @@
             "mainClass": "com.rhaxx.rhaxxcredentialservice.DemoApplication",
             "projectName": "rhaxx-credential-service",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RhaxxDiscoveryApplication<rhaxx-discovery-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.rhaxx.rhaxxdiscoveryservice.RhaxxDiscoveryApplication",
+            "projectName": "rhaxx-discovery-service",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RhaxxAuthenticationApplication<rhaxx-authentication-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.rhaxx.rhaxxauthenticationservice.RhaxxAuthenticationApplication",
+            "projectName": "rhaxx-authentication-service",
+            "args": ""
         }
     ]
 }
