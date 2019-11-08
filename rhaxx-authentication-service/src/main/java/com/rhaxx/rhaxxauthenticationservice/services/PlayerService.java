@@ -14,6 +14,6 @@ public interface PlayerService {
 
     // public void deleteByPlayerId(long playerId);
 
-    public List<Player> getAllPlayer();
+    public List<Player> getAllPlayers();
 
 }

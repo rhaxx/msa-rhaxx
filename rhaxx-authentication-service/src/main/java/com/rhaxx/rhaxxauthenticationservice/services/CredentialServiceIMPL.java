@@ -1,5 +1,6 @@
 package com.rhaxx.rhaxxauthenticationservice.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -43,7 +44,9 @@ public class CredentialServiceIMPL implements CredentialService {
 
     @Override
     public List<Credential> getAllCredential() {
-        return null;
+        List<Credential> credentials = new ArrayList<>();
+		credentialRepository.findAll().forEach(credentials::add);
+		return credentials;
     }
 
 }
