@@ -27,7 +27,7 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
-    //@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Player>> getAllPlayers() {
 		List<Player> players = playerService.getAllPlayers();
 		return new ResponseEntity<>(players, HttpStatus.OK);
