@@ -2,9 +2,12 @@ package com.rhaxx.rhaxxcredentialservice.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -21,5 +24,8 @@ public class Credential {
     private String username;
     @Column(name = "CREDENTIAL_PASSWORD")
     private String password;
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "PLAYER_ID")
+    Player player;
 
 }
