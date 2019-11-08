@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DemoApplication",
+            "request": "launch",
+            "mainClass": "com.rhaxx.rhaxxdiscoveryservice.DemoApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-DemoApplication<rhaxx-credential-service>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
