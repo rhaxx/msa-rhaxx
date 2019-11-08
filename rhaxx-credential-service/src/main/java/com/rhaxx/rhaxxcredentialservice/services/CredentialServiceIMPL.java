@@ -23,10 +23,12 @@ public class CredentialServiceIMPL implements CredentialService {
     @Transactional
     @Override
     public Credential createCredential(Credential credential) {
-        if(credential != null && credential != new Credential()) 
+        if(credential != null && credential != new Credential()) {
             return credentialRepository.save(credential);
-        else
+        }
+        else {
             return null;
+        }
     }
 
     @Override
