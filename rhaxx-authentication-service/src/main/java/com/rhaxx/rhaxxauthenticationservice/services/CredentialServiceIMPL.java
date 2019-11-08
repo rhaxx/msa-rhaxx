@@ -1,11 +1,11 @@
-package com.rhaxx.rhaxxcredentialservice.services;
+package com.rhaxx.rhaxxauthenticationservice.services;
 
 import java.util.List;
 
 import javax.transaction.Transactional;
 
-import com.rhaxx.rhaxxcredentialservice.models.Credential;
-import com.rhaxx.rhaxxcredentialservice.repositories.CredentialRepository;
+import com.rhaxx.rhaxxauthenticationservice.models.Credential;
+import com.rhaxx.rhaxxauthenticationservice.repositories.CredentialRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

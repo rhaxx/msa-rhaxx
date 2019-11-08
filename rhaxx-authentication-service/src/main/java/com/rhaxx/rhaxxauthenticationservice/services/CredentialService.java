@@ -1,8 +1,8 @@
-package com.rhaxx.rhaxxcredentialservice.services;
+package com.rhaxx.rhaxxauthenticationservice.services;
 
 import java.util.List;
 
-import com.rhaxx.rhaxxcredentialservice.models.Credential;
+import com.rhaxx.rhaxxauthenticationservice.models.Credential;
 
 public interface CredentialService {
 

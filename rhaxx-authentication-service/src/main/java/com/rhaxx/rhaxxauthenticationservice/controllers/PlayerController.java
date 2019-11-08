@@ -1,9 +1,9 @@
-package com.rhaxx.rhaxxcredentialservice.controllers;
+package com.rhaxx.rhaxxauthenticationservice.controllers;
 
 import javax.validation.Valid;
 
-import com.rhaxx.rhaxxcredentialservice.models.Player;
-import com.rhaxx.rhaxxcredentialservice.services.PlayerService;
+import com.rhaxx.rhaxxauthenticationservice.models.Player;
+import com.rhaxx.rhaxxauthenticationservice.services.PlayerService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

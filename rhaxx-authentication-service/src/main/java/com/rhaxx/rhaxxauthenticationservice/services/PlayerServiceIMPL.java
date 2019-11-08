@@ -1,9 +1,9 @@
-package com.rhaxx.rhaxxcredentialservice.services;
+package com.rhaxx.rhaxxauthenticationservice.services;
 
 import java.util.List;
 
-import com.rhaxx.rhaxxcredentialservice.models.Player;
-import com.rhaxx.rhaxxcredentialservice.repositories.PlayerRepository;
+import com.rhaxx.rhaxxauthenticationservice.models.Player;
+import com.rhaxx.rhaxxauthenticationservice.repositories.PlayerRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

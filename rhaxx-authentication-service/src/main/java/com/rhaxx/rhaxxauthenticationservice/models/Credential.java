@@ -1,4 +1,4 @@
-package com.rhaxx.rhaxxcredentialservice.models;
+package com.rhaxx.rhaxxauthenticationservice.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

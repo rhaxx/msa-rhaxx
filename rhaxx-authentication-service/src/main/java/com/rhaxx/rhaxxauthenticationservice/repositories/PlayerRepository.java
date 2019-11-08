@@ -1,6 +1,6 @@
-package com.rhaxx.rhaxxcredentialservice.repositories;
+package com.rhaxx.rhaxxauthenticationservice.repositories;
 
-import com.rhaxx.rhaxxcredentialservice.models.Player;
+import com.rhaxx.rhaxxauthenticationservice.models.Player;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
