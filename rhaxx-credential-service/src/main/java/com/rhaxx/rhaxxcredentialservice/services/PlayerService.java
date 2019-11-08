@@ -6,7 +6,7 @@ import com.rhaxx.rhaxxcredentialservice.models.Player;
 
 public interface PlayerService {
 
-    public void createPlayer(Player player);
+    public Player createPlayer(Player player);
 
     public void updatePlayer(Player player);
 
