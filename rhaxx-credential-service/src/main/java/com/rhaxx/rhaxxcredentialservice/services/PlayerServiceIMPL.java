@@ -18,10 +18,12 @@ public class PlayerServiceIMPL implements PlayerService {
 
     @Override
     public Player createPlayer(Player player) {
-        if(player != null && player != new Player()) 
+        if(player != null && player != new Player()) {
             return playerRepository.save(player);
-        else
+        }
+        else {
             return null;
+        }
     }
 
     @Override
