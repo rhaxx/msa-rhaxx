@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -44,6 +45,17 @@ public class AuthenticationController {
         }
     }
 
+    @DeleteMapping(value = "/credential/delete")
+    public ResponseEntity<String> deleteCredential(@Valid @RequestBody Credential credential) {
+        if (credential != null) {
+            String response = credential.getPlayer().getName() + " was successfully deleted.";
+            this.authenticationService.deleteCredential(credential);
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
     @GetMapping(value = "/player/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Player>> getAllPlayers() {
 		List<Player> players = authenticationService.getAllPlayers();
@@ -59,5 +71,18 @@ public class AuthenticationController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+
+    @PostMapping(value = "/player/delete")
+    public ResponseEntity<String> deletePlayer(@Valid @RequestBody Player player) {
+        if(player != null) {
+            String response = player.getName() + " was successfully deleted.";
+            this.authenticationService.deletePlayer(player);
+            return new ResponseEntity<>(response, HttpStatus.CREATED);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
 
 }
