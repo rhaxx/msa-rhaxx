@@ -34,21 +34,12 @@ public class AuthenticationServiceIMPL implements AuthenticationService {
 
     @Transactional
     @Override
-    public Credential createCredential(Credential credential) {
+    public Credential createUpdateCredential(Credential credential) {
         if (credential != null && credential != new Credential()) {
             playerRepository.save(credential.getPlayer());
             return credentialRepository.save(credential);
         } else {
             return null;
-        }
-    }
-
-    @Transactional
-    @Override
-    public void updateCredential(Credential credential) {
-        if (credential != null && credential != new Credential()) {
-            playerRepository.save(credential.getPlayer());
-            credentialRepository.save(credential);
         }
     }
 
@@ -70,20 +61,12 @@ public class AuthenticationServiceIMPL implements AuthenticationService {
 
     @Transactional
     @Override
-    public Player createPlayer(Player player) {
+    public Player createUpdatePlayer(Player player) {
         if(player != null && player != new Player()) {
             return playerRepository.save(player);
         }
         else {
             return null;
-        }
-    }
-
-    @Transactional
-    @Override
-    public void updatePlayer(Player player) {
-        if (player != null && player != new Player()) {
-            playerRepository.save(player);
         }
     }
 

@@ -9,17 +9,13 @@ public interface AuthenticationService {
 
     public List<Credential> getAllCredentials();
 
-    public Credential createCredential(Credential credential);
-
-    public void updateCredential(Credential credential);
+    public Credential createUpdateCredential(Credential credential);
 
     public void deleteCredential(Credential credential);
 
     public List<Player> getAllPlayers();
 
-    public Player createPlayer(Player player);
-
-    public void updatePlayer(Player player);
+    public Player createUpdatePlayer(Player player);
 
     public void deletePlayer(Player player);
     
