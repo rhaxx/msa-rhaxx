@@ -36,10 +36,10 @@ public class AuthenticationController {
         return new ResponseEntity<>(credentials, HttpStatus.OK);
     }
 
-    @PostMapping(value = "/credential/createUpdate", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Credential> createUpdateCredential(@Valid @RequestBody Credential credential) {
+    @PostMapping(value = "/credential/create", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Credential> createCredential(@Valid @RequestBody Credential credential) {
         if (credential != null) {
-            return new ResponseEntity<>(this.authenticationService.createUpdateCredential(credential), HttpStatus.CREATED);
+            return new ResponseEntity<>(this.authenticationService.createCredential(credential), HttpStatus.CREATED);
         } else {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
@@ -62,10 +62,10 @@ public class AuthenticationController {
 		return new ResponseEntity<>(players, HttpStatus.OK);
 	}
 
-    @PostMapping(value = "/player/createUpdate", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Player> createUpdatePlayer(@Valid @RequestBody Player player) {
+    @PostMapping(value = "/player/create", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Player> createPlayer(@Valid @RequestBody Player player) {
         if(player != null) {
-            return new ResponseEntity<>(this.authenticationService.createUpdatePlayer(player), HttpStatus.CREATED);
+            return new ResponseEntity<>(this.authenticationService.createPlayer(player), HttpStatus.CREATED);
         }
         else {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
