@@ -71,7 +71,7 @@ public class AuthenticationController {
         }
     }
 
-    @PostMapping(value = "/player/delete")
+    @DeleteMapping(value = "/player/delete")
     public ResponseEntity<String> deletePlayer(@Valid @RequestBody Player player) {
         if(player != null) {
             String response = player.getName() + " was successfully deleted.";
