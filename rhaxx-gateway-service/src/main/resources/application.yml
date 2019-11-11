@@ -1,0 +1,18 @@
+# properties -> yml including gateway routes
+# for eureka client
+server:
+    port: 8082
+spring:
+    application:
+        name: rhaxx-gateway-service
+# for gateway routing
+    cloud:
+        gateway:
+            routes:
+            - id: rhaxx-authentication-service
+              uri: lb://rhaxx-authentication-service
+              predicates:
+              - Path=/authentication/**
+              filters:
+              - RewritePath=/authentication/(?<path>.*), /$\{path}
+    
