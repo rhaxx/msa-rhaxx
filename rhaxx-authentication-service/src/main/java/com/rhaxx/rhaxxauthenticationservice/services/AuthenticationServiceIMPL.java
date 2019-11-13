@@ -32,6 +32,11 @@ public class AuthenticationServiceIMPL implements AuthenticationService {
         return credentials;
     }
 
+    @Override
+    public Credential getCredentialById(long credentialId) {
+        return credentialRepository.findById(credentialId).orElse(null);
+    }
+
     @Transactional
     @Override
     public Credential createCredential(Credential credential) {
@@ -66,6 +71,11 @@ public class AuthenticationServiceIMPL implements AuthenticationService {
         List<Player> players = new ArrayList<>();
 		playerRepository.findAll().forEach(players::add);
 		return players;
+    }
+
+    @Override
+    public Player getPlayerById(long playerId) {
+        return playerRepository.findById(playerId).orElse(null);
     }
 
     @Transactional

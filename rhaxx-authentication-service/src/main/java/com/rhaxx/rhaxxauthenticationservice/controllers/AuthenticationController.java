@@ -14,6 +14,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,6 +34,12 @@ public class AuthenticationController {
     public ResponseEntity<List<Credential>> getAllCredentials() {
         List<Credential> credentials = authenticationService.getAllCredentials();
         return new ResponseEntity<>(credentials, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/credential/{credentialId}", produces =  MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Credential> getCredentialById(@Valid @PathVariable long credentialId) {
+        Credential credential = authenticationService.getCredentialById(credentialId);
+        return new ResponseEntity<>(credential, HttpStatus.OK);
     }
 
     @PostMapping(value = "/credential/create", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -59,7 +66,13 @@ public class AuthenticationController {
     public ResponseEntity<List<Player>> getAllPlayers() {
 		List<Player> players = authenticationService.getAllPlayers();
 		return new ResponseEntity<>(players, HttpStatus.OK);
-	}
+    }
+    
+    @GetMapping(value = "/player/{playerId}", produces =  MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Player> getPlayerById(@Valid @PathVariable long playerId) {
+        Player player = authenticationService.getPlayerById(playerId);
+        return new ResponseEntity<>(player, HttpStatus.OK);
+    }
 
     @PostMapping(value = "/player/create", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Player> createPlayer(@Valid @RequestBody Player player) {

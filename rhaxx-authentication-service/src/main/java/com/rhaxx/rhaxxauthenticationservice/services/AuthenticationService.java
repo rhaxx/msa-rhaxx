@@ -9,6 +9,8 @@ public interface AuthenticationService {
 
     public List<Credential> getAllCredentials();
 
+    public Credential getCredentialById(long credentialId);
+
     public Credential createCredential(Credential credential);
 
     public void updateCredential(Credential credential);
@@ -16,6 +18,8 @@ public interface AuthenticationService {
     public void deleteCredential(Credential credential);
 
     public List<Player> getAllPlayers();
+
+    public Player getPlayerById(long playerId);
 
     public Player createPlayer(Player player);
 
